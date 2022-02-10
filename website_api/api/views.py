@@ -1,5 +1,8 @@
+from msilib.schema import ServiceInstall
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from api.serializers import UserSerializer
+from .models import User
 # from rest_framework import generics
 # from .serializers import RoomSerializer
 # from .models import Room
@@ -7,8 +10,6 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-# class RoomView(request):
-#     return HttpResponse("Hello")
-
-def main(requst):
-    return HttpResponse("Hello")
+class UserView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
