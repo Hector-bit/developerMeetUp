@@ -11,9 +11,16 @@ export default class App extends Component {
     render() {
         return (
             <div id="container">
-                <BrowserRouter>
-                    <HomepageTop/>
-                </BrowserRouter>
+                {/* <BrowserRouter>
+                    <Link to='/'>Home</Link>
+                    <Link>Log in</Link>
+                    <Link>Sign up</Link>
+                    <Routes>
+                        <Route path='/' element={<HomepageTop/>}></Route>
+                    </Routes>
+                </BrowserRouter> */}
+                <h2>heool there</h2>
+                <HomepageTop/>
             </div>
         )
     }
