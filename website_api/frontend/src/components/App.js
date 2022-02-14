@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import HomepageTop from './HomepageTop';
 import { render } from 'react-dom'
 
 export default class App extends Component {
@@ -7,7 +9,13 @@ export default class App extends Component {
     }
 
     render() {
-        return <h1>Testing react code</h1>
+        return (
+            <div id="container">
+                <BrowserRouter>
+                    <HomepageTop/>
+                </BrowserRouter>
+            </div>
+        )
     }
 }
 
