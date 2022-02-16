@@ -1,8 +1,13 @@
+{% extends 'base.html'%}
+
+{% block content %}
 
 
+    <h1>Projects Database</h1>
 
-<h1>Members Database</h1>
+    {% for item in all %}
+        <h2>{{ item.project_title }}</h2>
+        <p>{{ item.host_name }} </p>
+    {% endfor %}
 
-{% for item in all %}
-    <p>{{item.username}} {{item.email}}</p>
-{% endfor %}
+{% endblock  %} 
