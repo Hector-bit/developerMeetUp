@@ -17,5 +17,5 @@ class Project(models.Model):
     project_contact = models.CharField(max_length=1000)
 
     def __str__(self):
-        return "USERNAME: " + self.host_name + " PROJECT: " + self.project_title
+        return "HOST: " + self.host_name + " PROJECT: " + self.project_title
 
