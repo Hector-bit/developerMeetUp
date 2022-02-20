@@ -24,11 +24,11 @@ Now you have the repository on your system and are ready to contribute to the pr
 
 Before doing **anything**, please do a `git fetch` and a `git status`. The former updates your local computer storage with the current code on the github repo, and the latter will tell you what branch you are on and how many commits behind you are. **Please do not add code directly to the master branch**. That branch is reserved for peer-reviewed code and is meant to be the most stable version if something goes wrong with a development or testing branch. If you are in the master branch, switch to the appropriate branch as instructed by a project team member using the below command:
 
+`git switch "branch-name"`
+
+Or if instructed, create a new branch and simultaneously switch to it:
+
 `git switch -c "branch-name"`
-
-Or if instructed, create a new branch:
-
-`git branch "branch-name"`
 
 Use `git branch --list` to show existing branches if need be.
 
