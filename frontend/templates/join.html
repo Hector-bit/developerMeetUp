@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>JOIN TODAY</h1>
+    <form method="POST" action="{% url 'join' %}">
+    {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" class="form-control" id="exampleInputUsername" placeholder='username' name="username" value="{{username}}">
+        </div>
+        <div class="mb-3">
+            <input type="email" placeholder='email' class="form-control" id="exampleInputEmail1" name="email" value="{{email}}">
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password" name="password">
+        </div>
+        {% comment %} <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> {% endcomment %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock  %}

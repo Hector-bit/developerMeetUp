@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>LOGIN</h1>
+    <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+        {% comment %} <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> {% endcomment %}
+        <button type="submit" class="btn btn-primary">LOGIN</button>
+    </form>
+{% endblock  %}
