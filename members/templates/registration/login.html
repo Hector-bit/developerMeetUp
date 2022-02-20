@@ -2,20 +2,9 @@
 
 {% block content %}
     <h1>LOGIN</h1>
-    <form method="POST" action="{% url 'post' %}">
+    <form method="POST">
     {% csrf_token %}
-        <div class="mb-3">
-            <input type="text" class="form-control" id="exampleInputUsername" placeholder='Host Name' name="host_name" value="{{host_name}}">
-        </div>
-        <div class="mb-3">
-            <input type="text" placeholder='Project Title' class="form-control" id="exampleInputEmail1" name="project_title" value="{{project_title}}">
-        </div>
-        <div class="mb-3">
-            <input type="text" placeholder='Project Description' class="form-control" id="exampleInputEmail1" name="project_description" value="{{project_description}}">
-        </div>
-        <div class="mb-3">
-            <input type="text" placeholder='How can peole get a hold of you? Discord? Slack? Messageing App?' class="form-control" id="exampleInputEmail1" name="project_contact" value="{{project_contact}}">
-        </div>
+    {{ form.as_p }}
         {% comment %} <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
